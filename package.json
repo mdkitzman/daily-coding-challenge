@@ -1,0 +1,23 @@
+{
+  "name": "daily-coding-challenge",
+  "version": "1.0.0",
+  "description": "A set of daily coding challenge problems and possible soloutions",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdkitzman/daily-coding-challenge.git"
+  },
+  "author": "Mike Kitzman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdkitzman/daily-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/mdkitzman/daily-coding-challenge#readme",
+  "dependencies": {
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
+  }
+}
