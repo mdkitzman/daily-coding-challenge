@@ -1,22 +1,31 @@
-# The Problem
+# Daily Coding Challenge
 
-Given an array of numbers, and an input number, can you determine if any numbers add
-up to the given number.
+I have subscribed to the [Daily Coding Problem](https://www.dailycodingproblem.com/) newsletter
+to try and keep my brain active and thinking about various problems, kind of like a crossword
+puzzle or sodoku.  This is a collection of some of the ones I have attempted.
 
-## Example
+## Setup
 
-Given the array `[10, 15, 3, 7]` and the number `17`, you would return `true` since
-`10 + 7 = 17`
+I recommend using `nvm` to install and manage node.js versions.  There is a `.nvmrc` file
+that specifies the version of node.js to use.  Run the this via the command line to install
+the correct version of node.js
 
-## Details
-
-Write a function `sumExists` that will take a number and an array of numbers and return
-if the array contains two numbers that add up to the provided number.
-
-```typscript
-sumExists(sumNumber: number, candidates: number[]) : boolean
+```bash
+nvm install <version from .nvmrc>
 ```
 
-## Variation
+Once installed, run
 
-Can it be done in one pass?
+```bash
+nvm use <version from .nvmrc>
+```
+
+## Usage
+
+On the command line, run 
+
+```bash
+npm start
+```
+
+This will run the application and print out the parameters you can use with the program.
