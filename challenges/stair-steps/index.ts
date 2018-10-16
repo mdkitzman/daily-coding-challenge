@@ -1,7 +1,17 @@
 import { numWays } from './solution';
+import { IChallenge } from '../../types';
 
-for(let i = 0; i < 1000; i++) {
-  if(i % 10 === 0)
-    console.log(`Num Ways for ${i} is ${numWays(i)}`);
+class StairStepChallenge implements IChallenge {
+  name = 'stair-steps';
+  number = 1;
+
+  execute = function () {
+    for(let i = 0; i < 1000; i++) {
+      if(i % 10 === 0)
+        console.log(`Num Ways for ${i} is ${numWays(i)}`);
+    }
+  }
+  
 }
 
+export const challenge: IChallenge = new StairStepChallenge();

@@ -25,7 +25,15 @@ nvm use <version from .nvmrc>
 On the command line, run 
 
 ```bash
-npm start
+npm start -- [--challenge|--challengeNumber]
 ```
 
-This will run the application and print out the parameters you can use with the program.
+The `--challenge` or `--challengeNumber` parameters are required if you want to run a particular
+challenge.  Specify the `--challenge` with a string matching the name of the challenge to run.
+Specify the `--challengeNumber` if you know the number of the challenge to run.
+
+```bash
+npm start -- --challenge string-reverse
+```
+
+This will run the `string-reverse` challenege.
