@@ -5,6 +5,7 @@ Given an array of integers and a number k, where 1 <= k <= length of the array, 
 ## Example
 
 For example, given array = [10, 5, 2, 7, 8, 7] and k = 3, we should get: [10, 7, 8, 8], since:
+
 * 10 = max(10, 5, 2)
 * 7 = max(5, 2, 7)
 * 8 = max(2, 7, 8)
@@ -18,7 +19,7 @@ You can simply print them out as you compute them.
 Write a function `maxWindowed` that will take a number and an array of numbers and print out the results.
 
 ```typscript
-maxWindowed(k: number, numbers: number[]) : boolean
+maxWindowed(k: number, numbers: number[]) : number[]
 ```
 
 ## Variation
