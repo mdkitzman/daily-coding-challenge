@@ -4,8 +4,6 @@ import { IChallenge } from '../../types';
 class SumOfNumbersChallenge implements IChallenge {
 
   maxLarge = 1000000;
-  name = 'sum-of-numbers';
-  number = 3;
 
   execute = () => {
     [

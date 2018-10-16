@@ -2,10 +2,7 @@ import { arrayProduct } from './solution';
 import { IChallenge } from '../../types';
 
 class ArrayProductChallenge implements IChallenge {
-
-  name = 'array-product';
-  number: 0;
- 
+  
   execute = function () {
     [
       [1, 2, 3, 4, 5],

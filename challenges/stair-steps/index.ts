@@ -2,8 +2,6 @@ import { numWays } from './solution';
 import { IChallenge } from '../../types';
 
 class StairStepChallenge implements IChallenge {
-  name = 'stair-steps';
-  number = 1;
 
   execute = function () {
     for(let i = 0; i < 1000; i++) {

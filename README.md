@@ -25,12 +25,15 @@ nvm use <version from .nvmrc>
 On the command line, run 
 
 ```bash
-npm start -- [--challenge|--challengeNumber]
+npm start -- --challenge [challengeName] [-v]
 ```
 
-The `--challenge` or `--challengeNumber` parameters are required if you want to run a particular
-challenge.  Specify the `--challenge` with a string matching the name of the challenge to run.
-Specify the `--challengeNumber` if you know the number of the challenge to run.
+The `--challenge` parameter will run a particular challenge which matches a name
+for a challenge.
+
+The `-v` parameter will print out the readme associated with the challenge.
+
+### Example
 
 ```bash
 npm start -- --challenge string-reverse
