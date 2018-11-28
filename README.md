@@ -25,18 +25,11 @@ nvm use <version from .nvmrc>
 On the command line, run 
 
 ```bash
-npm start -- --challenge [challengeName] [-v]
+npm start
 ```
 
-The `--challenge` parameter will run a particular challenge which matches a name
-for a challenge.
+This will launch the application into an interactive mode allowing you 
+to first select the challenge you want to run.
 
-The `-v` parameter will print out the readme associated with the challenge.
-
-### Example
-
-```bash
-npm start -- --challenge string-reverse
-```
-
-This will run the `string-reverse` challenege.
+From there you can type `execute` or `readme` to either execute
+the challenge or view the readme.
