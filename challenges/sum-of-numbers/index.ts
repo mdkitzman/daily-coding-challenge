@@ -29,7 +29,7 @@ class SumOfNumbersChallenge implements IChallenge {
       },
       {
         sumNumber: this.maxLarge + this.maxLarge-1,
-        array: shuffle(Array.from(new Array(this.maxLarge),(val,index)=>index+1)),
+        array: Array.from(new Array(this.maxLarge),(val,index)=>index+1),
         expected: true
       },
       {
@@ -60,16 +60,6 @@ class SumOfNumbersChallenge implements IChallenge {
   }
 
 }
-
-// Thanks SO!  - https://stackoverflow.com/a/12646864
-function shuffle(array: any[]) : any[]{
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
 
 export const challenge: IChallenge = new SumOfNumbersChallenge();
 
