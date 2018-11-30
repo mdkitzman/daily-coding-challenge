@@ -1,30 +1,29 @@
 export function traverseGrid(grid: number[][]) : number {
-  return recursive(grid)(0, 0);
+  return recursiveNumWays(grid)(0, 0);
 }
 
-function recursive(grid: number[][]) : (col: number, row: number) => number {
-  let cache: number[][] = [...Array(grid.length)].map((e, row) => [...Array(grid[row].length)]);
-  const traverse = (col: number, row: number) => {
-    if(outOfBounds(grid, col, row) || isWall(grid, col, row)) return 0;
-    if(isEnd(grid, col, row)) return 1;
-    return traverse(col+1, row) + traverse(col, row+1);
-    /* if(cache[col][row] !== undefined) {
-      const numWays = traverse(col+1, row) + traverse(col, row+1);
-      cache[col][row] = numWays;
+function recursiveNumWays(grid: number[][]) : (row: number, col: number) => number {
+  const { outOfBounds, isWall, isEnd } = gridHelpers(grid);
+  
+  let cache: number[][] = [...Array(grid.length)].map((val, index) => [...Array(grid[index].length)]);
+  const traverse = (row: number, col: number) : number => {
+
+    if (outOfBounds(row, col) || isWall(row, col)) return 0;
+    if (isEnd(row, col)) return 1;
+    //return traverse(col+1, row) + traverse(row, col+1);
+    if (cache[row][col] === undefined) {
+      cache[row][col] = traverse(row+1, col) + traverse(row, col+1);
     }
-    cache[col][row]; */
+    return cache[row][col];
   };
+
   return traverse;
 }
 
-function outOfBounds(grid: number[][], col: number, row: number): boolean {
-  return col >= grid.length || row >= grid[col].length;
-}
-
-function isWall(grid: number[][], col: number, row: number): boolean {
-  return grid[col][row] === 1;
-}
-
-function isEnd(grid: number[][], col: number, row: number): boolean {
-  return col === grid.length - 1 && row === grid[col].length - 1;
+function gridHelpers (grid: number[][]) {
+  return {
+    outOfBounds : (row, col) => row >= grid.length || col >= grid[row].length,
+    isWall      : (row, col) => grid[row][col] === 1,
+    isEnd       : (row, col) => row === grid.length - 1 && col === grid[row].length - 1
+  };
 }
