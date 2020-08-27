@@ -1,5 +1,6 @@
 import { arrayProduct } from './solution';
 import { IChallenge } from '../../types';
+import { arrayStr } from '../../util/helpers';
 
 class ArrayProductChallenge implements IChallenge {
   
@@ -21,12 +22,6 @@ class ArrayProductChallenge implements IChallenge {
     });
   }
 
-}
-
-function arrayStr(array) {
-  return '[' + (array.length < 10
-    ? array.toString()
-    : `${array[0]}, ${array[1]}, ... , ${array[array.length-2]}, ${array[array.length-1]}`)+']';
 }
 
 export const challenge: IChallenge = new ArrayProductChallenge();
