@@ -1,8 +1,8 @@
 import * as yargs from 'yargs';
 import { readdirSync, readFileSync } from 'fs';
 import { IChallenge, IChallengeInfo, ChallengeAction } from './types';
+import { marked } from 'marked';
 const readlineSync = require('readline-sync');
-var marked = require('marked');
 var TerminalRenderer = require('marked-terminal');
 
 marked.setOptions({
@@ -38,7 +38,7 @@ const executeChallenge = (challenge: IChallengeInfo) => {
   challenge.challenge.execute(argv);
 };
 const showReadme = (challenge: IChallengeInfo) => {
-  console.log(marked(challenge.readme));
+  console.log(marked.parse(challenge.readme));
 };
 
 // Execution loop.
