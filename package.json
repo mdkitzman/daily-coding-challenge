@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/mdkitzman/daily-coding-challenge#readme",
   "dependencies": {
-    "@types/node": "^18.16.1",
-    "marked": "^4.3.0",
-    "marked-terminal": "^5.1.1",
+    "@types/node": "^20.0.0",
+    "marked": "^12.0.0",
+    "marked-terminal": "^7.0.0",
     "readline-sync": "^1.4.10",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",

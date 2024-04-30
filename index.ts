@@ -2,12 +2,13 @@ import * as yargs from 'yargs';
 import { readdirSync, readFileSync } from 'fs';
 import { IChallenge, IChallengeInfo, ChallengeAction } from './types';
 import { marked } from 'marked';
+import { markedTerminal } from 'marked-terminal';
+
 const readlineSync = require('readline-sync');
-var TerminalRenderer = require('marked-terminal');
 
 marked.setOptions({
   // Define custom renderer
-  renderer: new TerminalRenderer()
+  renderer: new markedTerminal()
 });
 
 const argv = (yargs as any).array('challenges').argv;
